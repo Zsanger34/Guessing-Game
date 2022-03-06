@@ -97,7 +97,7 @@ def Generator3():
             break
 
         else:
-            if stop < 4:
+            if stop < 3:
                 print('Wrong ' + str(3 - stop) + ' tries left')
                 stop = stop + 1
             else:
