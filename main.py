@@ -37,7 +37,7 @@ def main():
 def Generator1():
     Beginning = int(input("Pick a Number \n"))
     Ending = int(input("Pick a second Number \n"))
-    if Beginning<Ending:
+    if Beginning < Ending:
         answer = random.randint(Beginning, Ending)
     else:
         answer = random.randint(Ending, Beginning)
@@ -71,8 +71,13 @@ def Generator2():
             break
 
         else:
-            print('Wrong ' + str(10 - stop) + ' tries left')
-            stop = stop + 1
+            if stop < 9:
+                print('Wrong ' + str(10 - stop) + ' tries left')
+                stop = stop + 1
+            else:
+                print("Sorry you ran out of tries the right answer was " + str(answer))
+                time.sleep(5)
+                stop = stop + 1
 
 
 def Generator3():
@@ -92,8 +97,13 @@ def Generator3():
             break
 
         else:
-            print('Wrong ' + str(3 - stop) + ' tries left')
-            stop = stop + 1
+            if stop < 9:
+                print('Wrong ' + str(3 - stop) + ' tries left')
+                stop = stop + 1
+            else:
+                print("Sorry you ran out of tries the right answer was " + str(answer))
+                time.sleep(5)
+                stop = stop + 1
 
 
 main()
