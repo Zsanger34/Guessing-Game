@@ -71,7 +71,7 @@ def Generator2():
             break
 
         else:
-            if stop < 9:
+            if stop < 10:
                 print('Wrong ' + str(10 - stop) + ' tries left')
                 stop = stop + 1
             else:
