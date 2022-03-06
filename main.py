@@ -35,9 +35,12 @@ def main():
 
 
 def Generator1():
-    Beginning = int(input("Pick a Beginning Number \n"))
-    Ending = int(input("Pick a Ending Number \n"))
-    answer = random.randint(Beginning, Ending)
+    Beginning = int(input("Pick a Number \n"))
+    Ending = int(input("Pick a second Number \n"))
+    if Beginning<Ending:
+        answer = random.randint(Beginning, Ending)
+    else:
+        answer = random.randint(Ending, Beginning)
     stop = 0
     while stop == 0:
         guess = int(input("Pick a number between " + str(Beginning) + " and " + str(Ending) + "\n"))
@@ -52,11 +55,14 @@ def Generator1():
 
 
 def Generator2():
-    Beginning = int(input("Pick a Beginning Number \n"))
-    Ending = int(input("Pick a Ending Number \n"))
-    answer = random.randint(Beginning, Ending)
+    Beginning = int(input("Pick a Number \n"))
+    Ending = int(input("Pick a second Number \n"))
+    if Beginning < Ending:
+        answer = random.randint(Beginning, Ending)
+    else:
+        answer = random.randint(Ending, Beginning)
     stop = 0
-    while stop != 10:
+    while stop != 11:
         guess = int(input("Pick a number between " + str(Beginning) + " and " + str(Ending) + "\n"))
         if guess == answer:
             print("you got it")
@@ -70,11 +76,14 @@ def Generator2():
 
 
 def Generator3():
-    Beginning = int(input("Pick a Beginning Number \n"))
-    Ending = int(input("Pick a Ending Number \n"))
-    answer = random.randint(Beginning, Ending)
+    Beginning = int(input("Pick a Number \n"))
+    Ending = int(input("Pick a second Number \n"))
+    if Beginning < Ending:
+        answer = random.randint(Beginning, Ending)
+    else:
+        answer = random.randint(Ending, Beginning)
     stop = 0
-    while stop != 3:
+    while stop != 4:
         guess = int(input("Pick a number between " + str(Beginning) + " and " + str(Ending) + "\n"))
         if guess == answer:
             print("you got it")
